@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Website Cards Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1300px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-header,
+    .card-footer {
+      background-color: #f7f7f7;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .card-header {
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .card-footer {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .basic-card {
+      padding: 0;
+    }
+
+    .image-card img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .info-card p {
+      color: #555;
+    }
+
+    .stats-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-footer-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-footer-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .featured-card {
+      border: 3px solid #28a745;
+      background-color: #f0f9f0;
+    }
+
+    .alert-card {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+
+    .card-blockquote {
+      border-left: 4px solid #007bff;
+      padding-left: 20px;
+      font-style: italic;
+      background-color: #f0f0f0;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactive Website Cards Showcase</h1>
+
+  <div class="card-container">
+    <!-- Basic Card -->
+    <div class="card basic-card">
+      <div class="card-header">Basic Card</div>
+      <div class="card-content">
+        <p>This is a simple card with text content.</p>
+      </div>
+    </div>
+
+    <!-- Image Card -->
+    <div class="card image-card">
+      <img src="https://t4.ftcdn.net/jpg/02/02/63/43/360_F_202634386_5Mma89zfJQel89OLQNvPyIfVHm5PD9J9.jpg" alt="Placeholder">
+      <div class="card-content">
+        <h3>Image Card</h3>
+        <p>This card features an image with some text underneath.</p>
+      </div>
+    </div>
+
+    <!-- Info Card -->
+    <div class="card info-card">
+      <div class="card-header">Info Card</div>
+      <div class="card-content">
+        <h4>Info Heading</h4>
+        <p>Additional details and information can be placed here.</p>
+      </div>
+    </div>
+
+    <!-- Stats Card -->
+    <div class="card stats-card">
+      <div class="card-header">Stats Card</div>
+      <div class="card-content">
+        <div>
+          <p><strong>1,234</strong> Likes</p>
+          <p><strong>567</strong> Comments</p>
+        </div>
+        <div class="card-footer">
+          <button class="card-footer-btn">View More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Card -->
+    <div class="card featured-card">
+      <div class="card-header">Featured Card</div>
+      <div class="card-content">
+        <p>This is a featured card with special styling.</p>
+      </div>
+      <div class="card-footer">
+        <button class="card-footer-btn">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Alert Card -->
+    <div class="card alert-card">
+      <div class="card-header">Alert Card</div>
+      <div class="card-content">
+        <p><strong>Warning:</strong> This is an important message.</p>
+      </div>
+    </div>
+
+    <!-- Blockquote Card -->
+    <div class="card card-blockquote">
+      <blockquote>
+        <p>"This is a blockquote card for showcasing quotes in a styled manner."</p>
+        <footer>— John Doe</footer>
+      </blockquote>
+    </div>
+
+    <!-- Card with Header and Footer -->
+    <div class="card">
+      <div class="card-header">Card With Header and Footer</div>
+      <div class="card-content">
+        <p>This card has both a header and footer section for extra details.</p>
+      </div>
+      <div class="card-footer">
+        <button class="card-footer-btn">Footer Button</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

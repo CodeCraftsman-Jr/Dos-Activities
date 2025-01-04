@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 Color Variants Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .shade-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .shade-box {
+      width: 150px;
+      height: 100px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Primary Color Variations */
+    .primary-lightest { background-color: #cce4ff; }
+    .primary-lighter { background-color: #99ccff; }
+    .primary-light { background-color: #66b3ff; }
+    .primary { background-color: #007bff; }
+    .primary-dark { background-color: #0056b3; }
+    .primary-darker { background-color: #00408b; }
+    .primary-darkest { background-color: #00265c; }
+    .primary-deep { background-color: #001a33; }
+    
+    /* Secondary Color Variations */
+    .secondary-lightest { background-color: #d6d6d6; }
+    .secondary-lighter { background-color: #b3b3b3; }
+    .secondary-light { background-color: #a8a8a8; }
+    .secondary { background-color: #6C757D; }
+    .secondary-dark { background-color: #495057; }
+    .secondary-darker { background-color: #343a40; }
+    .secondary-darkest { background-color: #23272b; }
+    .secondary-deep { background-color: #1c2124; }
+
+    /* Success Color Variations */
+    .success-lightest { background-color: #b3f3b3; }
+    .success-lighter { background-color: #80e080; }
+    .success-light { background-color: #90EE90; }
+    .success { background-color: #28a745; }
+    .success-dark { background-color: #218838; }
+    .success-darker { background-color: #19692d; }
+    .success-darkest { background-color: #125d22; }
+    .success-deep { background-color: #0d5317; }
+
+    /* Danger Color Variations */
+    .danger-lightest { background-color: #f8d7da; }
+    .danger-lighter { background-color: #f1b0b6; }
+    .danger-light { background-color: #f8a7a3; }
+    .danger { background-color: #dc3545; }
+    .danger-dark { background-color: #c82333; }
+    .danger-darker { background-color: #a71d2d; }
+    .danger-darkest { background-color: #811d22; }
+    .danger-deep { background-color: #5c1717; }
+
+    /* Warning Color Variations */
+    .warning-lightest { background-color: #fff3cd; }
+    .warning-lighter { background-color: #ffe099; }
+    .warning-light { background-color: #ffecb3; }
+    .warning { background-color: #ffc107; }
+    .warning-dark { background-color: #e0a800; }
+    .warning-darker { background-color: #c77f00; }
+    .warning-darkest { background-color: #b57400; }
+    .warning-deep { background-color: #9f6100; }
+
+    /* Info Color Variations */
+    .info-lightest { background-color: #b3ecf5; }
+    .info-lighter { background-color: #7dd0e2; }
+    .info-light { background-color: #5bc0de; }
+    .info { background-color: #17a2b8; }
+    .info-dark { background-color: #117a8b; }
+    .info-darker { background-color: #0e5678; }
+    .info-darkest { background-color: #094f63; }
+    .info-deep { background-color: #06434e; }
+
+    /* Link Color Variations */
+    .link-lightest { background-color: #add8e6; }
+    .link-lighter { background-color: #7ec0e7; }
+    .link-light { background-color: #5b9bd5; }
+    .link { background-color: #007bff; }
+    .link-dark { background-color: #0056b3; }
+    .link-darker { background-color: #003f7f; }
+    .link-darkest { background-color: #002a66; }
+    .link-deep { background-color: #001a44; }
+
+    .shade-box span {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+
+    .shade-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>8 Color Variants Showcase</h1>
+  
+  <div class="shade-container">
+    <!-- Primary Color Variants -->
+    <div class="shade-box primary-lightest"><span>Primary Lightest</span></div>
+    <div class="shade-box primary-lighter"><span>Primary Lighter</span></div>
+    <div class="shade-box primary-light"><span>Primary Light</span></div>
+    <div class="shade-box primary"><span>Primary</span></div>
+    <div class="shade-box primary-dark"><span>Primary Dark</span></div>
+    <div class="shade-box primary-darker"><span>Primary Darker</span></div>
+    <div class="shade-box primary-darkest"><span>Primary Darkest</span></div>
+    <div class="shade-box primary-deep"><span>Primary Deep</span></div>
+
+    <!-- Secondary Color Variants -->
+    <div class="shade-box secondary-lightest"><span>Secondary Lightest</span></div>
+    <div class="shade-box secondary-lighter"><span>Secondary Lighter</span></div>
+    <div class="shade-box secondary-light"><span>Secondary Light</span></div>
+    <div class="shade-box secondary"><span>Secondary</span></div>
+    <div class="shade-box secondary-dark"><span>Secondary Dark</span></div>
+    <div class="shade-box secondary-darker"><span>Secondary Darker</span></div>
+    <div class="shade-box secondary-darkest"><span>Secondary Darkest</span></div>
+    <div class="shade-box secondary-deep"><span>Secondary Deep</span></div>
+
+    <!-- Success Color Variants -->
+    <div class="shade-box success-lightest"><span>Success Lightest</span></div>
+    <div class="shade-box success-lighter"><span>Success Lighter</span></div>
+    <div class="shade-box success-light"><span>Success Light</span></div>
+    <div class="shade-box success"><span>Success</span></div>
+    <div class="shade-box success-dark"><span>Success Dark</span></div>
+    <div class="shade-box success-darker"><span>Success Darker</span></div>
+    <div class="shade-box success-darkest"><span>Success Darkest</span></div>
+    <div class="shade-box success-deep"><span>Success Deep</span></div>
+
+    <!-- Danger Color Variants -->
+    <div class="shade-box danger-lightest"><span>Danger Lightest</span></div>
+    <div class="shade-box danger-lighter"><span>Danger Lighter</span></div>
+    <div class="shade-box danger-light"><span>Danger Light</span></div>
+    <div class="shade-box danger"><span>Danger</span></div>
+    <div class="shade-box danger-dark"><span>Danger Dark</span></div>
+    <div class="shade-box danger-darker"><span>Danger Darker</span></div>
+    <div class="shade-box danger-darkest"><span>Danger Darkest</span></div>
+    <div class="shade-box danger-deep"><span>Danger Deep</span></div>
+  </div>
+</body>
+</html>

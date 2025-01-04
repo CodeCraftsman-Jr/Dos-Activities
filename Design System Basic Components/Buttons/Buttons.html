@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Website Buttons Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .button-demo button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-transform: capitalize;
+    }
+
+    .button-demo button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .primary { background-color: #007BFF; color: white; }
+    .primary-variant { background-color: #0056b3; color: white; border: 1px solid #003f7f; }
+    .primary-alt { background-color: #80caff; color: #002752; border: 1px solid #0056b3; }
+    .secondary { background-color: #6C757D; color: white; }
+    .secondary-variant { background-color: #4e565c; color: white; border: 1px solid #2d3337; }
+    .secondary-alt { background-color: #a8aeb3; color: #333; border: 1px solid #6C757D; }
+    .disabled { background-color: #E0E0E0; color: #A0A0A0; cursor: not-allowed; }
+    .outlined { background: none; color: #007BFF; border: 2px solid #007BFF; }
+    .outlined-variant { background: none; color: #0056b3; border: 2px dashed #0056b3; }
+    .outlined-alt { background: none; color: #80caff; border: 1px solid #80caff; }
+    .icon-btn { background-color: #FFD700; color: black; display: flex; align-items: center; gap: 5px; }
+    .icon-btn img { width: 16px; height: 16px; }
+    .gradient { background: linear-gradient(to right, #ff7e5f, #feb47b); color: white; }
+    .gradient-variant { background: linear-gradient(to right, #ff947b, #ffa57f); color: white; }
+    .gradient-alt { background: linear-gradient(to right, #ff947b, #ffc2b2); color: #610f11; }
+    .flat { background: none; color: #000; text-decoration: underline; border: none; }
+    .flat-variant { background: none; color: #666; text-decoration: none; }
+    .flat-alt { background: #f9f9f9; color: #222; text-decoration: underline; }
+    .raised { background-color: #6A5ACD; color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
+    .raised-variant { background-color: #8A2BE2; color: white; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+    .raised-alt { background-color: #9A6BF2; color: #e4e2f4; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); }
+    .toggle { background-color: #48C78E; color: white; border: none; }
+    .toggle.active { background-color: #FF6347; }
+    .ghost { background-color: transparent; color: #6C757D; border: 2px dashed #6C757D; }
+    .ghost-variant { background-color: rgba(108, 117, 125, 0.1); color: #6C757D; border: 2px dotted #6C757D; }
+    .ghost-alt { background-color: rgba(108, 117, 125, 0.2); color: #495057; border: 1px dashed #6C757D; }
+    .loading { background-color: #17A2B8; color: white; position: relative; overflow: hidden; }
+    .loading::after { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: rgba(255, 255, 255, 0.3); animation: loading 1.5s infinite; }
+    @keyframes loading { 0% { width: 0; left: 0; } 50% { width: 100%; left: 0; } 100% { width: 0; left: 100%; } }
+    .success { background-color: #28A745; color: white; }
+    .success-variant { background-color: #218838; color: white; }
+    .success-alt { background-color: #90EE90; color: #003000; }
+    .dropdown { background-color: #FFC107; color: white; position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: #f1f1f1; min-width: 160px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); z-index: 1; }
+    .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
+    .dropdown-content a:hover { background-color: #ddd; }
+    .dropdown:hover .dropdown-content { display: block; }
+    .alert-message { display: none; margin-top: 10px; color: #333; font-weight: bold; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Interactive Website Buttons Showcase</h1>
+  <div class="button-container">
+    <!-- Primary Buttons -->
+    <div class="button-demo">
+      <button class="primary" onclick="showMessage('Primary button clicked!')">Primary</button>
+      <button class="primary-variant" onclick="showMessage('Primary Variant button clicked!')">Primary Variant</button>
+      <button class="primary-alt" onclick="showMessage('Primary Alt button clicked!')">Primary Alt</button>
+    </div>
+
+    <!-- Secondary Buttons -->
+    <div class="button-demo">
+      <button class="secondary" onclick="showMessage('Secondary button clicked!')">Secondary</button>
+      <button class="secondary-variant" onclick="showMessage('Secondary Variant button clicked!')">Secondary Variant</button>
+      <button class="secondary-alt" onclick="showMessage('Secondary Alt button clicked!')">Secondary Alt</button>
+    </div>
+
+    <!-- Disabled Button -->
+    <div class="button-demo">
+      <button class="disabled" disabled>Disabled</button>
+    </div>
+
+    <!-- Outlined Buttons -->
+    <div class="button-demo">
+      <button class="outlined" onclick="showMessage('Outlined button clicked!')">Outlined</button>
+      <button class="outlined-variant" onclick="showMessage('Outlined Variant button clicked!')">Outlined Variant</button>
+      <button class="outlined-alt" onclick="showMessage('Outlined Alt button clicked!')">Outlined Alt</button>
+    </div>
+
+    <!-- Icon Button -->
+    <div class="button-demo">
+      <button class="icon-btn" onclick="showMessage('Icon button clicked!')">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Icon">
+        Icon Button
+      </button>
+    </div>
+
+    <!-- Gradient Buttons -->
+    <div class="button-demo">
+      <button class="gradient" onclick="showMessage('Gradient button clicked!')">Gradient</button>
+      <button class="gradient-variant" onclick="showMessage('Gradient Variant button clicked!')">Gradient Variant</button>
+      <button class="gradient-alt" onclick="showMessage('Gradient Alt button clicked!')">Gradient Alt</button>
+    </div>
+
+    <!-- Flat Buttons -->
+    <div class="button-demo">
+      <button class="flat" onclick="showMessage('Flat button clicked!')">Flat</button>
+      <button class="flat-variant" onclick="showMessage('Flat Variant button clicked!')">Flat Variant</button>
+      <button class="flat-alt" onclick="showMessage('Flat Alt button clicked!')">Flat Alt</button>
+    </div>
+
+    <!-- Raised Buttons -->
+    <div class="button-demo">
+      <button class="raised" onclick="showMessage('Raised button clicked!')">Raised</button>
+      <button class="raised-variant" onclick="showMessage('Raised Variant button clicked!')">Raised Variant</button>
+      <button class="raised-alt" onclick="showMessage('Raised Alt button clicked!')">Raised Alt</button>
+    </div>
+
+    <!-- Toggle Button -->
+    <div class="button-demo">
+      <button class="toggle" onclick="toggleState(this)">Toggle</button>
+    </div>
+
+    <!-- Ghost Buttons -->
+    <div class="button-demo">
+      <button class="ghost" onclick="showMessage('Ghost button clicked!')">Ghost</button>
+      <button class="ghost-variant" onclick="showMessage('Ghost Variant button clicked!')">Ghost Variant</button>
+      <button class="ghost-alt" onclick="showMessage('Ghost Alt button clicked!')">Ghost Alt</button>
+    </div>
+
+    <!-- Loading Button -->
+    <div class="button-demo">
+      <button class="loading" onclick="showMessage('Loading button clicked!')">Loading</button>
+    </div>
+
+    <!-- Success Buttons -->
+    <div class="button-demo">
+      <button class="success" onclick="showMessage('Success button clicked!')">Success</button>
+      <button class="success-variant" onclick="showMessage('Success Variant button clicked!')">Success Variant</button>
+      <button class="success-alt" onclick="showMessage('Success Alt button clicked!')">Success Alt</button>
+    </div>
+
+    <!-- Dropdown Button -->
+    <div class="button-demo">
+      <button class="dropdown">
+        Dropdown
+        <div class="dropdown-content">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  <p id="alert" class="alert-message"></p>
+
+  <script>
+    function showMessage(message) {
+      const alertBox = document.getElementById('alert');
+      alertBox.textContent = message;
+      alertBox.style.display = 'block';
+      setTimeout(() => alertBox.style.display = 'none', 2000);
+    }
+
+    function toggleState(button) {
+      button.classList.toggle('active');
+      const message = button.classList.contains('active') ? 'Toggle ON' : 'Toggle OFF';
+      showMessage(message);
+    }
+  </script>
+</body>
+</html>

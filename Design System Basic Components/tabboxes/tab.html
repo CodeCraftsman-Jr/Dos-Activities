@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Bar Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4f8;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 40px;
+    }
+
+    .tab-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      margin-bottom: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .tab {
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+      text-align: center;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .tab:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    /* Classic Tab Bar */
+    .classic .tab {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    .classic .tab.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Rounded Tab Bar */
+    .rounded .tab {
+      background-color: #e4e7eb;
+      border-radius: 25px;
+    }
+
+    .rounded .tab.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Gradient Tab Bar */
+    .gradient {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .gradient .tab.active {
+      background: linear-gradient(to right, #ff947b, #ffa57f);
+      color: white;
+    }
+
+    /* Iconic Tab Bar */
+    .iconic .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      gap: 8px;
+    }
+
+    .iconic .tab.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Full-width Tab Bar */
+    .full-width {
+      width: 100%;
+    }
+
+    .full-width .tab {
+      width: 100%;
+      text-align: center;
+    }
+
+    .full-width .tab.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Neumorphism Tab Bar */
+    .neumorphism .tab {
+      background: #e4e7eb;
+      border-radius: 10px;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.3);
+      transition: 0.2s;
+    }
+
+    .neumorphism .tab.active {
+      background: #f0f4f8;
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 5px rgba(255, 255, 255, 0.2);
+      color: #007bff;
+    }
+
+    /* Minimal Tab Bar */
+    .minimal .tab {
+      border-bottom: 3px solid transparent;
+      padding-bottom: 10px;
+    }
+
+    .minimal .tab:hover {
+      border-bottom: 3px solid #007bff;
+    }
+
+    .minimal .tab.active {
+      border-bottom: 3px solid #007bff;
+      color: #007bff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Tab Bar Showcase</h1>
+
+  <!-- Classic Tab Bar -->
+  <div class="tab-bar classic">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Classic 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Classic 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Classic 3</div>
+  </div>
+
+  <!-- Rounded Tab Bar -->
+  <div class="tab-bar rounded">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Rounded 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Rounded 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Rounded 3</div>
+  </div>
+
+  <!-- Gradient Tab Bar -->
+  <div class="tab-bar gradient">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Gradient 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Gradient 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Gradient 3</div>
+  </div>
+
+  <!-- Iconic Tab Bar -->
+  <div class="tab-bar iconic">
+    <div class="tab active" onclick="switchTab(event, 'tab1')"><img src="https://via.placeholder.com/20" alt="Tab 1 Icon"> Icon 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')"><img src="https://via.placeholder.com/20" alt="Tab 2 Icon"> Icon 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')"><img src="https://via.placeholder.com/20" alt="Tab 3 Icon"> Icon 3</div>
+  </div>
+
+  <!-- Full-width Tab Bar -->
+  <div class="tab-bar full-width">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Full-width 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Full-width 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Full-width 3</div>
+  </div>
+
+  <!-- Neumorphism Tab Bar -->
+  <div class="tab-bar neumorphism">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Neumorphism 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Neumorphism 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Neumorphism 3</div>
+  </div>
+
+  <!-- Minimal Tab Bar -->
+  <div class="tab-bar minimal">
+    <div class="tab active" onclick="switchTab(event, 'tab1')">Minimal 1</div>
+    <div class="tab" onclick="switchTab(event, 'tab2')">Minimal 2</div>
+    <div class="tab" onclick="switchTab(event, 'tab3')">Minimal 3</div>
+  </div>
+
+  <script>
+    function switchTab(event, tabName) {
+      const tabs = event.currentTarget.parentNode.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
